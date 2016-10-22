@@ -2,13 +2,18 @@
 
 > aka npm-package-scripts-listr or npsl for short
 
-** demo only **
+**demo only**
+
+## Features
+
+* Read package-scripts from js, json, or yml file.
+* Excellent terminal output
 
 ## Usage
 
 ### install
 
-** not yet **
+**not yet**
 
 ### package-scripts.yml
 
