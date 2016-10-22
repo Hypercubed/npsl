@@ -1,4 +1,4 @@
-const execa = require('execa');
+const gitTasks = require('./scripts/git');
 
 module.exports = {
   test: {
@@ -9,8 +9,8 @@ module.exports = {
     update: 'jest -u',
     prepublish: [
       {
-        title: 'check git',
-        script: [CheckCurrentBranch, CheckLocalWorkingTree, CheckRemoteHistory]
+        title: 'Git',
+        script: gitTasks({})
       },
       'del node_modules',
       'yarn install',
@@ -27,27 +27,3 @@ module.exports = {
     'git push --folow-tags'
   ]
 };
-
-function CheckCurrentBranch() {
-  return execa.stdout('git', ['symbolic-ref', '--short', 'HEAD']).then(branch => {
-    if (branch !== 'dev') {
-      throw new Error('Not on `dev` branch.');
-    }
-  });
-}
-
-function CheckLocalWorkingTree() {
-  return execa.stdout('git', ['status', '--porcelain']).then(status => {
-    if (status !== '') {
-      throw new Error('Unclean working tree. Commit or stash changes first.');
-    }
-  });
-}
-
-function CheckRemoteHistory() {
-  return execa.stdout('git', ['rev-list', '--count', '--left-only', '@{u}...HEAD']).then(result => {
-    if (result !== '0') {
-      throw new Error('Remote history differ. Please pull changes.');
-    }
-  });
-}
