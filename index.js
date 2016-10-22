@@ -16,6 +16,11 @@ function prepareScript(script, title) {
     });
     return task;
   }
+  if (typeof script === 'function') {
+    task.title = title || script.name;
+    task.task = script;
+    return task;
+  }
   if (Array.isArray(script)) {
     task.title = title || 'unnamed';
     task.task = () => {
@@ -25,7 +30,7 @@ function prepareScript(script, title) {
     return task;
   }
   // TODO: functions
-  throw new Error(`${typeof script}Not yet supported`);
+  throw new Error(`${typeof script} not yet supported`);
 }
 
 const readScriptFile = configPath => {

@@ -35,6 +35,12 @@ describe('javascript', () => {
       expect(res).toMatchSnapshot();
     });
   });
+
+  test('function task', () => {
+    return runScript({path: configPath}, 'fun').then(res => {
+      expect(res).toMatchSnapshot();
+    });
+  });
 });
 
 describe('json', () => {

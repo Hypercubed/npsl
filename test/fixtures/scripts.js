@@ -1,8 +1,11 @@
+const execa = require('execa');
+
 module.exports = {
   scripts: {
     default: 'echo "default script"',
     test: 'echo "test script"',
     check: ['echo "test script"', 'echo "lint.default"'],
+    fun: () => {},
     lint: {
       default: 'echo "lint.default"',
       sub: {
