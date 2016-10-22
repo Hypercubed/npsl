@@ -16,7 +16,7 @@ function prepareTask(input, title) {
   script.task = script.task || script.script || script.default || function () {};
 
   if (typeof script.task === 'function') {
-    script.title = script.title || title || script.name || 'unnamed';
+    script.title = script.title || title || script.task.name || 'unnamed';
     return script;
   }
 

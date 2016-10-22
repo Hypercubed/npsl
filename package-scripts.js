@@ -8,16 +8,16 @@ module.exports = {
     ],
     update: 'jest -u',
     prepublish: [
-      CheckCurrentBranch,
-      CheckLocalWorkingTree,
-      CheckRemoteHistory,
+      {
+        title: 'check git',
+        script: [CheckCurrentBranch, CheckLocalWorkingTree, CheckRemoteHistory]
+      },
       'del node_modules',
       'yarn install',
       'xo',
       'jest'
     ]
   },
-  something: [CheckCurrentBranch, CheckLocalWorkingTree, CheckRemoteHistory],
   lint: 'xo',
   version: [
     'chg release -y',
