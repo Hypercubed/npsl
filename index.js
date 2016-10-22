@@ -4,32 +4,41 @@ const {readFileSync} = require('fs');
 const execa = require('execa');
 const Listr = require('listr');
 const {safeLoad} = require('js-yaml');
+const {isPlainObject} = require('lodash');
 
 const {requireDefaultFromModule, getScriptToRun} = require('./lib/utils');
 
-function prepareScript(script, title) {
-  const task = {};
-  if (typeof script === 'string') {
-    task.title = title || script;
-    task.task = () => execa.shell(script).then(({stdout, stderr}) => {
-      Object.assign(task, {stdout, stderr});
+function prepareTask(input, title) {
+  const script = isPlainObject(input) ?
+    Object.assign({}, input) :
+    {task: input};
+
+  script.task = script.task || script.script || script.default || function () {};
+
+  if (typeof script.task === 'function') {
+    script.title = script.title || title || script.name || 'unnamed';
+    return script;
+  }
+
+  if (typeof script.task === 'string') {
+    const cmd = script.task;
+    script.title = script.title || title || cmd;
+    script.task = () => execa.shell(cmd).then(({stdout, stderr}) => {
+      Object.assign(script, {script: cmd, stdout, stderr});
     });
-    return task;
+    return script;
   }
-  if (typeof script === 'function') {
-    task.title = title || script.name;
-    task.task = script;
-    return task;
-  }
-  if (Array.isArray(script)) {
-    task.title = title || 'unnamed';
-    task.task = () => {
-      task.subtasks = script.map(s => prepareScript(s));
-      return new Listr(task.subtasks);
+
+  if (Array.isArray(script.task)) {
+    const arr = script.task.slice();
+    script.title = script.title || title || 'unnamed';
+    script.task = () => {
+      script.subtasks = arr.map(s => prepareTask(s));
+      return new Listr(script.subtasks);
     };
-    return task;
+    return script;
   }
-  // TODO: functions
+
   throw new Error(`${typeof script} not yet supported`);
 }
 
@@ -43,24 +52,22 @@ const readScriptFile = configPath => {
   return json.scripts || json;
 };
 
-function getPreparedScript(config, title = 'default') {
+function getTasks(config, title = 'default') {
   const scripts = readScriptFile(config.path);
   const script = getScriptToRun(scripts, title);
-  const preparedScript = prepareScript(script, title);
+  const preparedScript = prepareTask(script, title);
 
   // todo: catch missing script
   return [preparedScript];
 }
 
 // return promise
-function runScript(config, scriptName) {
-  const preparedScript = getPreparedScript(config, scriptName);
+function runScript(options, scriptName) {
+  const tasks = getTasks(options, scriptName);
 
   // TODO: check error?
-  const task = new Listr(preparedScript);
-  return task.run().then(() => {
-    return preparedScript;
-  });
+  const listr = new Listr(tasks, options);
+  return listr.run().then(() => tasks);
 }
 
 module.exports = {

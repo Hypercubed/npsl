@@ -31,7 +31,7 @@ module.exports = {
 function CheckCurrentBranch() {
   return execa.stdout('git', ['symbolic-ref', '--short', 'HEAD']).then(branch => {
     if (branch !== 'dev') {
-      throw new Error('Not on `master` branch. Use --any-branch to publish anyway.');
+      throw new Error('Not on `dev` branch.');
     }
   });
 }

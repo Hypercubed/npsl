@@ -4,6 +4,9 @@ scripts:
   check:
   - echo "test script"
   - echo "lint.default"
+  hello:
+    title: Hello World
+    task: echo "Hello World"
   lint:
     default: echo "lint.default"
     sub:
