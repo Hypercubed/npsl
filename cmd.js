@@ -16,7 +16,8 @@ const cli = meow(`help TBD`, {
 
 debug('Debugging enabled');
 
-cli.path = join(process.cwd(), cli.flags.config) ||
+cli.path = cli.flags.config ?
+  join(process.cwd(), cli.flags.config) :
   findUp.sync('package-scripts.js') ||
   findUp.sync('package-scripts.json') ||
   findUp.sync('package-scripts.yml');
