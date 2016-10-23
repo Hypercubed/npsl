@@ -56,6 +56,25 @@ Array [
 ]
 `;
 
+exports[`javascript multiple tasks 1`] = `
+Array [
+  Object {
+    "script": "echo test script",
+    "stderr": "",
+    "stdout": "test script",
+    "task": [Function],
+    "title": "test",
+  },
+  Object {
+    "script": "echo Hello World",
+    "stderr": "",
+    "stdout": "Hello World",
+    "task": [Function],
+    "title": "Hello World",
+  },
+]
+`;
+
 exports[`javascript simple string task 1`] = `
 Array [
   Object {
@@ -71,9 +90,26 @@ Array [
 exports[`javascript task default 1`] = `
 Array [
   Object {
+    "default": "echo lint.default",
     "script": "echo lint.default",
     "stderr": "",
     "stdout": "lint.default",
+    "sub": Object {
+      "hidden-thing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "hiddenThing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "thing": Object {
+        "description": "this is a description",
+        "script": "echo deeply nested thing",
+      },
+    },
     "task": [Function],
     "title": "lint",
   },
@@ -156,9 +192,26 @@ Array [
 exports[`json task default 1`] = `
 Array [
   Object {
+    "default": "echo lint.default",
     "script": "echo lint.default",
     "stderr": "",
     "stdout": "lint.default",
+    "sub": Object {
+      "hidden-thing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "hiddenThing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "thing": Object {
+        "description": "this is a description",
+        "script": "echo deeply nested thing",
+      },
+    },
     "task": [Function],
     "title": "lint",
   },
@@ -241,9 +294,26 @@ Array [
 exports[`yml task default 1`] = `
 Array [
   Object {
+    "default": "echo lint.default",
     "script": "echo lint.default",
     "stderr": "",
     "stdout": "lint.default",
+    "sub": Object {
+      "hidden-thing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "hiddenThing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "thing": Object {
+        "description": "this is a description",
+        "script": "echo deeply nested thing",
+      },
+    },
     "task": [Function],
     "title": "lint",
   },
