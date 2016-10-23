@@ -5,8 +5,8 @@
   "author": "J. Harshbarger",
   "license": "MIT",
   "scripts": {
-    "test": "xo && jest ./test",
-    "test.update": "jest ./test -u",
+    "test": "xo && jest",
+    "test.update": "jest -u",
     "version": "npsl version"
   },
   "bin": {

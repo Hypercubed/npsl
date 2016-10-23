@@ -3,18 +3,18 @@ Array [
   Object {
     "subtasks": Array [
       Object {
-        "script": "echo \"test script\"",
+        "script": "echo test script",
         "stderr": "",
         "stdout": "test script",
         "task": [Function],
-        "title": "echo \"test script\"",
+        "title": "echo test script",
       },
       Object {
-        "script": "echo \"lint.default\"",
+        "script": "echo lint.default",
         "stderr": "",
         "stdout": "lint.default",
         "task": [Function],
-        "title": "echo \"lint.default\"",
+        "title": "echo lint.default",
       },
     ],
     "task": [Function],
@@ -26,7 +26,7 @@ Array [
 exports[`javascript deep task 1`] = `
 Array [
   Object {
-    "script": "echo \"deeply nested thing\"",
+    "script": "echo deeply nested thing",
     "stderr": "",
     "stdout": "deeply nested thing",
     "task": [Function],
@@ -38,7 +38,7 @@ Array [
 exports[`javascript default task 1`] = `
 Array [
   Object {
-    "script": "echo \"default script\"",
+    "script": "echo default script",
     "stderr": "",
     "stdout": "default script",
     "task": [Function],
@@ -59,7 +59,7 @@ Array [
 exports[`javascript simple string task 1`] = `
 Array [
   Object {
-    "script": "echo \"test script\"",
+    "script": "echo test script",
     "stderr": "",
     "stdout": "test script",
     "task": [Function],
@@ -71,7 +71,7 @@ Array [
 exports[`javascript task default 1`] = `
 Array [
   Object {
-    "script": "echo \"lint.default\"",
+    "script": "echo lint.default",
     "stderr": "",
     "stdout": "lint.default",
     "task": [Function],
@@ -83,7 +83,7 @@ Array [
 exports[`javascript task with title 1`] = `
 Array [
   Object {
-    "script": "echo \"Hello World\"",
+    "script": "echo Hello World",
     "stderr": "",
     "stdout": "Hello World",
     "task": [Function],
@@ -97,18 +97,18 @@ Array [
   Object {
     "subtasks": Array [
       Object {
-        "script": "echo \"test script\"",
+        "script": "echo test script",
         "stderr": "",
         "stdout": "test script",
         "task": [Function],
-        "title": "echo \"test script\"",
+        "title": "echo test script",
       },
       Object {
-        "script": "echo \"lint.default\"",
+        "script": "echo lint.default",
         "stderr": "",
         "stdout": "lint.default",
         "task": [Function],
-        "title": "echo \"lint.default\"",
+        "title": "echo lint.default",
       },
     ],
     "task": [Function],
@@ -120,7 +120,7 @@ Array [
 exports[`json deep task 1`] = `
 Array [
   Object {
-    "script": "echo \"deeply nested thing\"",
+    "script": "echo deeply nested thing",
     "stderr": "",
     "stdout": "deeply nested thing",
     "task": [Function],
@@ -132,7 +132,7 @@ Array [
 exports[`json default task 1`] = `
 Array [
   Object {
-    "script": "echo \"default script\"",
+    "script": "echo default script",
     "stderr": "",
     "stdout": "default script",
     "task": [Function],
@@ -144,7 +144,7 @@ Array [
 exports[`json simple string task 1`] = `
 Array [
   Object {
-    "script": "echo \"test script\"",
+    "script": "echo test script",
     "stderr": "",
     "stdout": "test script",
     "task": [Function],
@@ -156,7 +156,7 @@ Array [
 exports[`json task default 1`] = `
 Array [
   Object {
-    "script": "echo \"lint.default\"",
+    "script": "echo lint.default",
     "stderr": "",
     "stdout": "lint.default",
     "task": [Function],
@@ -168,7 +168,7 @@ Array [
 exports[`json task with title 1`] = `
 Array [
   Object {
-    "script": "echo \"Hello World\"",
+    "script": "echo Hello World",
     "stderr": "",
     "stdout": "Hello World",
     "task": [Function],
@@ -182,18 +182,18 @@ Array [
   Object {
     "subtasks": Array [
       Object {
-        "script": "echo \"test script\"",
+        "script": "echo test script",
         "stderr": "",
         "stdout": "test script",
         "task": [Function],
-        "title": "echo \"test script\"",
+        "title": "echo test script",
       },
       Object {
-        "script": "echo \"lint.default\"",
+        "script": "echo lint.default",
         "stderr": "",
         "stdout": "lint.default",
         "task": [Function],
-        "title": "echo \"lint.default\"",
+        "title": "echo lint.default",
       },
     ],
     "task": [Function],
@@ -205,7 +205,7 @@ Array [
 exports[`yml deep task 1`] = `
 Array [
   Object {
-    "script": "echo \"deeply nested thing\"",
+    "script": "echo deeply nested thing",
     "stderr": "",
     "stdout": "deeply nested thing",
     "task": [Function],
@@ -217,7 +217,7 @@ Array [
 exports[`yml default task 1`] = `
 Array [
   Object {
-    "script": "echo \"default script\"",
+    "script": "echo default script",
     "stderr": "",
     "stdout": "default script",
     "task": [Function],
@@ -229,7 +229,7 @@ Array [
 exports[`yml simple string task 1`] = `
 Array [
   Object {
-    "script": "echo \"test script\"",
+    "script": "echo test script",
     "stderr": "",
     "stdout": "test script",
     "task": [Function],
@@ -241,7 +241,7 @@ Array [
 exports[`yml task default 1`] = `
 Array [
   Object {
-    "script": "echo \"lint.default\"",
+    "script": "echo lint.default",
     "stderr": "",
     "stdout": "lint.default",
     "task": [Function],
@@ -253,7 +253,7 @@ Array [
 exports[`yml task with title 1`] = `
 Array [
   Object {
-    "script": "echo \"Hello World\"",
+    "script": "echo Hello World",
     "stderr": "",
     "stdout": "Hello World",
     "task": [Function],
