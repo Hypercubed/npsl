@@ -5,18 +5,21 @@ test:
     - jest
   update: jest -u
 publish:
-  - title: Git
+  title: Push to github
+  default:
+  - title: Git Checks
     script:
-    - node scripts/check-current-branch.js dev
-    - node scripts/check-local-working-tree.js
-    - node scripts/check-remote-history.js
+      - node scripts/check-current-branch.js dev
+      - node scripts/check-local-working-tree.js
+      - node scripts/check-remote-history.js
   - title: Test
     script:
-    - del node_modules
-    - yarn install
-    - xo
-    - jest
-  - git push origin dev --tags
+      - del node_modules
+      - yarn install
+      - xo
+      - jest
+  - title: Push
+    script: git push origin dev --tags
 lint: xo
 version:
   - chg release -y
