@@ -1,0 +1,333 @@
+exports[`javascript array of tasks 1`] = `
+Array [
+  Object {
+    "subtasks": Array [
+      Object {
+        "script": "echo test script",
+        "stderr": "",
+        "stdout": "test script",
+        "task": [Function],
+        "title": "echo test script",
+      },
+      Object {
+        "script": "echo lint.default",
+        "stderr": "",
+        "stdout": "lint.default",
+        "task": [Function],
+        "title": "echo lint.default",
+      },
+    ],
+    "task": [Function],
+    "title": "check",
+  },
+]
+`;
+
+exports[`javascript deep task 1`] = `
+Array [
+  Object {
+    "script": "echo deeply nested thing",
+    "stderr": "",
+    "stdout": "deeply nested thing",
+    "task": [Function],
+    "title": "l.s.t",
+  },
+]
+`;
+
+exports[`javascript default task 1`] = `
+Array [
+  Object {
+    "script": "echo default script",
+    "stderr": "",
+    "stdout": "default script",
+    "task": [Function],
+    "title": "default",
+  },
+]
+`;
+
+exports[`javascript function task 1`] = `
+Array [
+  Object {
+    "task": [Function],
+    "title": "fun",
+  },
+]
+`;
+
+exports[`javascript multiple tasks 1`] = `
+Array [
+  Object {
+    "script": "echo test script",
+    "stderr": "",
+    "stdout": "test script",
+    "task": [Function],
+    "title": "test",
+  },
+  Object {
+    "script": "echo Hello World",
+    "stderr": "",
+    "stdout": "Hello World",
+    "task": [Function],
+    "title": "Hello World",
+  },
+]
+`;
+
+exports[`javascript simple string task 1`] = `
+Array [
+  Object {
+    "script": "echo test script",
+    "stderr": "",
+    "stdout": "test script",
+    "task": [Function],
+    "title": "test",
+  },
+]
+`;
+
+exports[`javascript task default 1`] = `
+Array [
+  Object {
+    "default": "echo lint.default",
+    "script": "echo lint.default",
+    "stderr": "",
+    "stdout": "lint.default",
+    "sub": Object {
+      "hidden-thing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "hiddenThing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "thing": Object {
+        "description": "this is a description",
+        "script": "echo deeply nested thing",
+      },
+    },
+    "task": [Function],
+    "title": "lint",
+  },
+]
+`;
+
+exports[`javascript task with title 1`] = `
+Array [
+  Object {
+    "script": "echo Hello World",
+    "stderr": "",
+    "stdout": "Hello World",
+    "task": [Function],
+    "title": "Hello World",
+  },
+]
+`;
+
+exports[`json array of tasks 1`] = `
+Array [
+  Object {
+    "subtasks": Array [
+      Object {
+        "script": "echo test script",
+        "stderr": "",
+        "stdout": "test script",
+        "task": [Function],
+        "title": "echo test script",
+      },
+      Object {
+        "script": "echo lint.default",
+        "stderr": "",
+        "stdout": "lint.default",
+        "task": [Function],
+        "title": "echo lint.default",
+      },
+    ],
+    "task": [Function],
+    "title": "check",
+  },
+]
+`;
+
+exports[`json deep task 1`] = `
+Array [
+  Object {
+    "script": "echo deeply nested thing",
+    "stderr": "",
+    "stdout": "deeply nested thing",
+    "task": [Function],
+    "title": "l.s.t",
+  },
+]
+`;
+
+exports[`json default task 1`] = `
+Array [
+  Object {
+    "script": "echo default script",
+    "stderr": "",
+    "stdout": "default script",
+    "task": [Function],
+    "title": "default",
+  },
+]
+`;
+
+exports[`json simple string task 1`] = `
+Array [
+  Object {
+    "script": "echo test script",
+    "stderr": "",
+    "stdout": "test script",
+    "task": [Function],
+    "title": "test",
+  },
+]
+`;
+
+exports[`json task default 1`] = `
+Array [
+  Object {
+    "default": "echo lint.default",
+    "script": "echo lint.default",
+    "stderr": "",
+    "stdout": "lint.default",
+    "sub": Object {
+      "hidden-thing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "hiddenThing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "thing": Object {
+        "description": "this is a description",
+        "script": "echo deeply nested thing",
+      },
+    },
+    "task": [Function],
+    "title": "lint",
+  },
+]
+`;
+
+exports[`json task with title 1`] = `
+Array [
+  Object {
+    "script": "echo Hello World",
+    "stderr": "",
+    "stdout": "Hello World",
+    "task": [Function],
+    "title": "Hello World",
+  },
+]
+`;
+
+exports[`yml array of tasks 1`] = `
+Array [
+  Object {
+    "subtasks": Array [
+      Object {
+        "script": "echo test script",
+        "stderr": "",
+        "stdout": "test script",
+        "task": [Function],
+        "title": "echo test script",
+      },
+      Object {
+        "script": "echo lint.default",
+        "stderr": "",
+        "stdout": "lint.default",
+        "task": [Function],
+        "title": "echo lint.default",
+      },
+    ],
+    "task": [Function],
+    "title": "check",
+  },
+]
+`;
+
+exports[`yml deep task 1`] = `
+Array [
+  Object {
+    "script": "echo deeply nested thing",
+    "stderr": "",
+    "stdout": "deeply nested thing",
+    "task": [Function],
+    "title": "l.s.t",
+  },
+]
+`;
+
+exports[`yml default task 1`] = `
+Array [
+  Object {
+    "script": "echo default script",
+    "stderr": "",
+    "stdout": "default script",
+    "task": [Function],
+    "title": "default",
+  },
+]
+`;
+
+exports[`yml simple string task 1`] = `
+Array [
+  Object {
+    "script": "echo test script",
+    "stderr": "",
+    "stdout": "test script",
+    "task": [Function],
+    "title": "test",
+  },
+]
+`;
+
+exports[`yml task default 1`] = `
+Array [
+  Object {
+    "default": "echo lint.default",
+    "script": "echo lint.default",
+    "stderr": "",
+    "stdout": "lint.default",
+    "sub": Object {
+      "hidden-thing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "hiddenThing": Object {
+        "hidden-from-help": true,
+        "hiddenFromHelp": true,
+        "script": "echo hidden",
+      },
+      "thing": Object {
+        "description": "this is a description",
+        "script": "echo deeply nested thing",
+      },
+    },
+    "task": [Function],
+    "title": "lint",
+  },
+]
+`;
+
+exports[`yml task with title 1`] = `
+Array [
+  Object {
+    "script": "echo Hello World",
+    "stderr": "",
+    "stdout": "Hello World",
+    "task": [Function],
+    "title": "Hello World",
+  },
+]
+`;

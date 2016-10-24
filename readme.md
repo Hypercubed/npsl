@@ -2,20 +2,34 @@
 
 > aka npm-package-scripts-listr or npsl for short
 
-**demo only**
+**experiment**
 
 ## Features
 
 * Read package-scripts from js, json, or yml file.
 * Excellent terminal output
+* Can run nested commands
+
+## install
+
+**Not yet published to npm**
 
 ## Usage
 
-### install
+```
+Usage
+ $ npsl <task> [more tasks]
 
-**not yet**
+Options:
 
-### package-scripts.yml
+  -h, --help
+  -V, --version
+  -p, --path <filepath>     Path to scripts file (defaults to nearest package-scripts.{js,json,yml}).
+  -c, --concurrent          Run tasks concurrently.
+  -r, --renderer            Renderer that should be used (default, verbose, silent)
+```
+
+### Example package-scripts.yml
 
 ```
 test:
@@ -23,26 +37,24 @@ test:
   - xo
   - jest
   update: jest -u
-  prepublish:
+publish:
   - del node_modules
   - yarn install
   - xo
   - jest
+  - git push --tags
 lint: xo
-version:
-- chg release -y
-- git add -A CHANGELOG.md
-postpublish:
-- git push --folow-tags
 ```
 
-### cli
+### Examples commands
 
 ```sh
-npsl test.prepublish
+npsl xo jest --concurrent # Runs xo and jest concurrently
+npsl test # Runs the test script in package-scripts.{js,json,yml}
+npsl pub # Runs the pub* script in package-scripts.{js,json,yml}
 ```
 
-[![asciicast](https://asciinema.org/a/786o8mz84breb80w4oxvhg4le.png)](https://asciinema.org/a/786o8mz84breb80w4oxvhg4le)
+[![asciicast](https://asciinema.org/a/57j6u7jaaj49vrczghkxrqe00.png)](https://asciinema.org/a/57j6u7jaaj49vrczghkxrqe00)
 
 # Inspiration
 

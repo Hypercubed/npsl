@@ -2,10 +2,14 @@
 
 _\( managed using [todo-md](https://github.com/Hypercubed/todo-md) \)_
 
-- [ ] Additional args
-- [ ] Multiple tasks
-- [ ] -c, --config
-- [ ] -p, --parallel
-- [ ] -s, --silent
+- [ ] Additional args after --?
+- [ ] A name!!!
+- [ ] Combine with grunion?
+- [ ] Task globbing?
+- [x] Multiple tasks
+- [x] -p, --path
+- [x] -c, --concurrent
+- [x] -r, --renderer
 - [ ] Test cli
-- [ ] --help
+- [x] --help
+- [ ] Search for tasks in ./node_modules/.bin
