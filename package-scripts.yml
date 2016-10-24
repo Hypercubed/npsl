@@ -1,0 +1,23 @@
+test:
+  title: Test
+  default:
+    - xo
+    - jest
+  update: jest -u
+publish:
+  - title: Git
+    script:
+    - node scripts/check-current-branch.js dev
+    - node scripts/check-local-working-tree.js
+    - node scripts/check-remote-history.js
+  - title: Test
+    script:
+    - del node_modules
+    - yarn install
+    - xo
+    - jest
+  - git push origin dev --tags
+lint: xo
+version:
+  - chg release -y
+  - git add -A CHANGELOG.md
