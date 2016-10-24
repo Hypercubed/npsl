@@ -22,7 +22,7 @@ const cli = meow(`
 `, {
   alias: {
     c: 'concurrent',
-    prom: 'path',
+    p: 'path',
     r: 'renderer',
     h: 'help',
     V: 'version'
