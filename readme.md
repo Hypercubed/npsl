@@ -55,7 +55,7 @@ npsl pub # Runs the pub* script in package-scripts.{js,json,yml}
 npsl pub -r verbose # Runs the pub* script with verbouse output
 ```
 
-[![asciicast](https://asciinema.org/a/57j6u7jaaj49vrczghkxrqe00.png)](https://asciinema.org/a/57j6u7jaaj49vrczghkxrqe00)
+[![asciicast](https://asciinema.org/a/90351.png)](https://asciinema.org/a/90351)
 
 # Inspiration
 
